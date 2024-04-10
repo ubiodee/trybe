@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
-import {Video} from "../models/video.model.js"
 import {User} from "../models/user.model.js"
+import {Video} from "../models/video.model.js"
 import {Subscription} from "../models/subscription.model.js"
 import {Like} from "../models/like.model.js"
 import {apiError} from "../utils/apiError.js"
@@ -99,7 +99,7 @@ const getChannelStats = asyncHandler(async (req, res) => {
         totalViews: video[0]?.totalViews || 0,
         totalVideos: video[0]?.totalVideos || 0,
         monitizationPoints : monitizationPoints,
-        monitizationStatus : monitizationStatus
+        monitizationStatus : monitizationStatus,
     };
 
     return res
